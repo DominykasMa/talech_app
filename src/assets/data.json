@@ -1,0 +1,103 @@
+{
+	"columns": [
+		"Name",
+		"EAN",
+		"Type",
+		"Weight",
+		"Color",
+		"Active",
+		"Action"
+	],
+	"items": [
+		{
+			"id": 0,
+			"name": "McVitie's",
+			"ean": "59265509",
+			"type": "noodles",
+			"weight": 1333,
+			"color": "violet",
+			"active": true
+		},
+		{
+			"id": 1,
+			"name": " Sunbeam Bread",
+			"ean": "30998367",
+			"type": "noodles",
+			"weight": 1568,
+			"color": "green",
+			"active": true
+		},
+		{
+			"id": 2,
+			"name": " Newman's Own",
+			"ean": "02822736",
+			"type": "salads",
+			"weight": 4907,
+			"color": "violet",
+			"active": true
+		},
+		{
+			"id": 3,
+			"name": "Entenmann's",
+			"ean": "02618035",
+			"type": "desserts",
+			"weight": 2072,
+			"color": "red",
+			"active": true
+		},
+		{
+			"id": 4,
+			"name": "Cobblestone",
+			"ean": "19483477",
+			"type": "pies",
+			"weight": 3145,
+			"color": "green",
+			"active": true
+		},
+		{
+			"id": 5,
+			"name": " Tastykake",
+			"ean": "67889779",
+			"type": "noodles",
+			"weight": 2427,
+			"color": "violet",
+			"active": true
+		},
+		{
+			"id": 6,
+			"name": " Tastykake",
+			"ean": "39892669",
+			"type": "stews",
+			"weight": 3200,
+			"color": "yellow",
+			"active": true
+		},
+		{
+			"id": 7,
+			"name": "Nature's Own",
+			"ean": "93712957",
+			"type": "soups",
+			"weight": 3353,
+			"color": "indigo",
+			"active": true
+		},
+		{
+			"id": 8,
+			"name": "Cobblestone",
+			"ean": "20390243",
+			"type": "sandwiches",
+			"weight": 1072,
+			"color": "indigo",
+			"active": true
+		},
+		{
+			"id": 9,
+			"name": "Hovis",
+			"ean": "22038340",
+			"type": "soups",
+			"weight": 2805,
+			"color": "green",
+			"active": false
+		}
+	]
+}
