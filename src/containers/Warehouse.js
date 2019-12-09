@@ -2,7 +2,15 @@ import React, { Component } from 'react'
 import WarehouseTable from '../components/WarehouseTable'
 import { Header, Grid } from 'semantic-ui-react'
 import { connect } from 'react-redux'
-import { getData, deleteProduct, editProduct, addProduct, enableDisableProduct } from '../redux/actions'
+import {
+  getData,
+  deleteProduct,
+  editProduct,
+  addProduct,
+  enableDisableProduct,
+  editQuantity,
+  editPrice
+} from '../redux/actions'
 import Add from '../components/actions/Add'
 
 
@@ -14,15 +22,24 @@ class CounterComponent extends Component {
 
 
   render() {
-    const { data, deleteProduct, editProduct, addProduct, enableDisableProduct } = this.props
+    const {
+      data,
+      deleteProduct,
+      editProduct,
+      addProduct,
+      enableDisableProduct,
+      editQuantity,
+      editPrice
+    } = this.props
+
     return (
       <div className='ui container'>
         <Grid columns={2} stackable>
           <Grid.Column>
-          <Header content='Talech app'/>
+            <Header content='Talech app' />
           </Grid.Column>
           <Grid.Column>
-          <Add addProduct={addProduct}/>
+            <Add addProduct={addProduct} />
           </Grid.Column>
         </Grid>
         {
@@ -32,6 +49,8 @@ class CounterComponent extends Component {
             deleteProduct={deleteProduct}
             editProduct={editProduct}
             enableDisableProduct={enableDisableProduct}
+            editQuantity={editQuantity}
+            editPrice={editPrice}
           />
         }
       </div>
@@ -62,6 +81,12 @@ const mapDispatchToProps = (dispatch) => {
     },
     enableDisableProduct: (id) => {
       dispatch(enableDisableProduct(id));
+    },
+    editQuantity: (productQuantity, id) => {
+      dispatch(editQuantity(productQuantity, id));
+    },
+    editPrice: (productPrice, id) => {
+      dispatch(editPrice(productPrice, id));
     }
   }
 }

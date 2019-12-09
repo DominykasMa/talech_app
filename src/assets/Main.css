@@ -26,3 +26,7 @@ body {
   float: right;
   margin-bottom: 10px !important;
 }
+
+.inputCell {
+  width: 9%;
+}

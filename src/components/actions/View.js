@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Button, Header, Modal, Table } from "semantic-ui-react";
-import TableHeader from "../TableHeader"
-import { withRouter } from 'react-router-dom'
+import { Button, Header, Modal, Tab } from "semantic-ui-react";
+import ViewTable from '../view/viewTable';
 
 export class View extends Component {
 
@@ -19,7 +18,7 @@ export class View extends Component {
     };
 
     render() {
-        const item = this.props.item;
+        const { item } = this.props;
         return (
             <Modal
                 trigger={<Button content='View' color='grey' onClick={this.toggleModal} />}
@@ -28,44 +27,33 @@ export class View extends Component {
                 open={this.state.modalOpen}
                 onClose={this.toggleModal}>
                 <Header>
-                    <h2>View Item</h2>
+                    <h2>Item Details</h2>
                 </Header>
                 <Modal.Content>
-                    <Table celled>
-                        <TableHeader columns={[
-                            "Name",
-                            "EAN",
-                            "Type",
-                            "Weight",
-                            "Color"
-                        ]} />
-                        <Table.Body>
+                    <Tab
+                        panes={[
                             {
-                                <Table.Row key={`item-${item.id}`}>
-                                    <Table.Cell>
-                                        {item.name}
-                                    </Table.Cell>
-                                    <Table.Cell>
-                                        {item.ean}
-                                    </Table.Cell>
-                                    <Table.Cell>
-                                        {item.type}
-                                    </Table.Cell>
-                                    <Table.Cell>
-                                        {item.weight}
-                                    </Table.Cell>
-                                    <Table.Cell>
-                                        {item.color}
-                                    </Table.Cell>
-                                </Table.Row>
+                                menuItem: 'View item', render: () =>
+                                    <Tab.Pane>
+                                        <ViewTable item={item} />
+                                    </Tab.Pane>
+                            },
+                            {
+                                menuItem: 'Item quantity', render: () =>
+                                    <Tab.Pane>
+                                    </Tab.Pane>
+                            },
+                            {
+                                menuItem: 'Item price', render: () =>
+                                    <Tab.Pane>
+                                    </Tab.Pane>
                             }
-                        </Table.Body>
-
-                    </Table>
+                        ]}
+                    />
                 </Modal.Content>
             </Modal>
         );
     }
 
 }
-export default withRouter(View)
+export default View

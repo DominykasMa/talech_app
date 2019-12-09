@@ -6,98 +6,384 @@
 		"Weight",
 		"Color",
 		"Active",
+		"Quantity",
+		"Price",
 		"Action"
 	],
 	"items": [
 		{
 			"id": 0,
-			"name": "McVitie's",
-			"ean": "59265509",
-			"type": "noodles",
-			"weight": 1333,
-			"color": "violet",
-			"active": true
+			"name": "Dave's Killer Bread",
+			"ean": "57046102",
+			"type": "stews",
+			"weight": 2888,
+			"color": "red",
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 50
+				},
+				{
+					"id": 1,
+					"quantity": 30
+				},
+				{
+					"id": 2,
+					"quantity": 48
+				},
+				{
+					"id": 3,
+					"quantity": 50
+				},
+				{
+					"id": 4,
+					"quantity": 60
+				},
+				{
+					"id": 5,
+					"quantity": 0
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 39,
+					"date": "07-12-2019"
+				},
+				{
+					"id": 1,
+					"price": 58,
+					"date": "05-17-2020"
+				},
+				{
+					"id": 2,
+					"price": 77,
+					"date": "05-05-2020"
+				},
+				{
+					"id": 3,
+					"price": 30,
+					"date": "09-07-2020"
+				},
+				{
+					"id": 4,
+					"price": 83,
+					"date": "05-08-2020"
+				},
+				{
+					"id": 5,
+					"price": 98,
+					"date": "06-28-2020"
+				},
+				{
+					"id": 6,
+					"price": 11,
+					"date": "11-20-2020"
+				}				
+			]
 		},
 		{
 			"id": 1,
-			"name": " Sunbeam Bread",
-			"ean": "30998367",
-			"type": "noodles",
-			"weight": 1568,
-			"color": "green",
-			"active": true
+			"name": "Cobblestone",
+			"ean": "70755297",
+			"type": "salads",
+			"weight": 4368,
+			"color": "violet",
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 56
+				},
+				{
+					"id": 1,
+					"quantity": 33
+				},
+				{
+					"id": 2,
+					"quantity": 22
+				},
+				{
+					"id": 3,
+					"quantity": 78
+				},
+				{
+					"id": 4,
+					"quantity": 56
+				},
+				{
+					"id": 5,
+					"quantity": 63
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 83,
+					"date": "11-02-2020"
+				},
+				{
+					"id": 1,
+					"price": 58,
+					"date": "06-12-2020"
+				},
+				{
+					"id": 2,
+					"price": 56,
+					"date": "01-22-2020"
+				},
+				{
+					"id": 3,
+					"price": 82,
+					"date": "12-09-2020"
+				},
+				{
+					"id": 4,
+					"price": 12,
+					"date": "06-12-2020"
+				},
+				{
+					"id": 5,
+					"price": 51,
+					"date": "04-09-2019"
+				},
+				{
+					"id": 6,
+					"price": 30,
+					"date": "09-27-2019"
+				}
+			]
 		},
 		{
 			"id": 2,
-			"name": " Newman's Own",
-			"ean": "02822736",
-			"type": "salads",
-			"weight": 4907,
-			"color": "violet",
-			"active": true
+			"name": " Warburtons",
+			"ean": "68614879",
+			"type": "stews",
+			"weight": 4540,
+			"color": "indigo",
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 24
+				},
+				{
+					"id": 1,
+					"quantity": 28
+				},
+				{
+					"id": 2,
+					"quantity": 36
+				},
+				{
+					"id": 3,
+					"quantity": 45
+				},
+				{
+					"id": 4,
+					"quantity": 99
+				},
+				{
+					"id": 5,
+					"quantity": 10
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 50,
+					"date": "2018-08-06"
+				}
+			]
 		},
 		{
 			"id": 3,
-			"name": "Entenmann's",
-			"ean": "02618035",
+			"name": "Dave's Killer Bread",
+			"ean": "45301203",
 			"type": "desserts",
-			"weight": 2072,
-			"color": "red",
-			"active": true
+			"weight": 1697,
+			"color": "indigo",
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 21
+				},
+				{
+					"id": 1,
+					"quantity": 25
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 50,
+					"date": "2018-08-06"
+				}
+			]
 		},
 		{
 			"id": 4,
-			"name": "Cobblestone",
-			"ean": "19483477",
-			"type": "pies",
-			"weight": 3145,
-			"color": "green",
-			"active": true
+			"name": "Dave's Killer Bread",
+			"ean": "19405188",
+			"type": "stews",
+			"weight": 4634,
+			"color": "orange",
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 11
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 16,
+					"date": "06-09-2019"
+				},
+				{
+					"id": 1,
+					"price": 58,
+					"date": "05-14-2020"
+				},
+				{
+					"id": 2,
+					"price": 39,
+					"date": "06-18-2019"
+				},
+				{
+					"id": 3,
+					"price": 48,
+					"date": "02-15-2020"
+				},
+				{
+					"id": 4,
+					"price": 31,
+					"date": "06-13-2019"
+				},
+				{
+					"id": 5,
+					"price": 51,
+					"date": "03-22-2019"
+				},
+				{
+					"id": 6,
+					"price": 47,
+					"date": "10-29-2019"
+				}
+			]
 		},
 		{
 			"id": 5,
-			"name": " Tastykake",
-			"ean": "67889779",
-			"type": "noodles",
-			"weight": 2427,
-			"color": "violet",
-			"active": true
+			"name": "Kiwi",
+			"ean": "85137668",
+			"type": "desserts",
+			"weight": 3458,
+			"color": "yellow",
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 15
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 50,
+					"date": "10-29-2019"
+				}
+			]
 		},
 		{
 			"id": 6,
-			"name": " Tastykake",
-			"ean": "39892669",
-			"type": "stews",
-			"weight": 3200,
-			"color": "yellow",
-			"active": true
+			"name": "Pepperidge Farm",
+			"ean": "42042276",
+			"type": "pasta",
+			"weight": 4202,
+			"color": "blue",
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 50
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 50,
+					"date": "10-29-2019"
+				}
+			]
 		},
 		{
 			"id": 7,
-			"name": "Nature's Own",
-			"ean": "93712957",
-			"type": "soups",
-			"weight": 3353,
+			"name": "Home Pride",
+			"ean": "72442273",
+			"type": "salads",
+			"weight": 3564,
 			"color": "indigo",
-			"active": true
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 33
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 50,
+					"date": "10-29-2019"
+				}
+			]
 		},
 		{
 			"id": 8,
-			"name": "Cobblestone",
-			"ean": "20390243",
-			"type": "sandwiches",
-			"weight": 1072,
-			"color": "indigo",
-			"active": true
+			"name": "Westminster Cracker Company",
+			"ean": "82149856",
+			"type": "seafood",
+			"weight": 4360,
+			"color": "yellow",
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 78
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 50,
+					"date": "10-29-2019"
+				}
+			]
 		},
 		{
 			"id": 9,
-			"name": "Hovis",
-			"ean": "22038340",
-			"type": "soups",
-			"weight": 2805,
-			"color": "green",
-			"active": false
+			"name": "Nabisco",
+			"ean": "06386589",
+			"type": "stews",
+			"weight": 4326,
+			"color": "red",
+			"active": true,
+			"productQuantity": [
+				{
+					"id": 0,
+					"quantity": 22
+				}
+			],
+			"productPrice": [
+				{
+					"id": 0,
+					"price": 50,
+					"date": "10-29-2019"
+				}
+			]
 		}
 	]
 }

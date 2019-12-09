@@ -16,8 +16,8 @@ import * as serviceWorker from './serviceWorker';
 serviceWorker.unregister();
 
 //Getting JSON data and putting it into local storage
-if(!localStorage.getItem('warehouseData'))
-localStorage.setItem('warehouseData', JSON.stringify(require('./assets/data.json')));
+if (!localStorage.getItem('warehouseData'))
+    localStorage.setItem('warehouseData', JSON.stringify(require('./assets/data.json')));
 
 render(
     <Provider store={store}>

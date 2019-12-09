@@ -1,4 +1,4 @@
-export const initialState ={
+export const initialState = {
     data: null,
     product: null,
     id: -1

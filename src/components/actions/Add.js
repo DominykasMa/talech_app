@@ -7,14 +7,12 @@ import {
     numbers_only
 } from '../../assets/FormValidations/ErrorMessages';
 
-
-
 export class Add extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            item: this.props.item,
+            item: null,
             modalOpen: false
         };
     }
@@ -25,19 +23,44 @@ export class Add extends Component {
                 [name]: value
             }),
         });
+        console.log(this.state.item);
     };
 
     handleNumber = (e, { name, value }) => {
-
-        this.setState({
-            item: Object.assign({}, this.state.item, {
-                [name]: parseInt(value)
-            }),
-        });
+        if (name === 'quantity') {
+            this.setState({
+                item: Object.assign({}, this.state.item, {
+                    productQuantity: [
+                        {
+                            id: 0,
+                            [name]: parseInt(value)
+                        }
+                    ]
+                }),
+            });
+        } else if (name === 'price') {
+            this.setState({
+                item: Object.assign({}, this.state.item, {
+                    productPrice: [
+                        {
+                            id: 0,
+                            [name]: parseInt(value)
+                        }
+                    ]
+                }),
+            });
+        } else {
+            this.setState({
+                item: Object.assign({}, this.state.item, {
+                    [name]: parseInt(value)
+                }),
+            });
+        }
     };
 
     handleSubmit = () => {
         const data = this.state.item;
+        console.log(data);
         data.active = true;
         this.props.addProduct(data);
         this.toggleModal();
@@ -55,7 +78,7 @@ export class Add extends Component {
         return (
             <Modal
                 trigger={<Button content='Add new' color='blue' className='addNew-btn' onClick={this.toggleModal} />}
-                size='small'
+                size='large'
                 closeIcon
                 open={this.state.modalOpen}
                 onClose={this.toggleModal}>
@@ -64,7 +87,7 @@ export class Add extends Component {
                 </Header>
                 <Modal.Content>
                     <Form onValidSubmit={this.handleSubmit} id='saveItem'>
-                        <Form.Group widths='equal'>
+                        <Form.Group>
                             <Form.Input fluid
                                 label='Name'
                                 placeholder='Name'
@@ -122,6 +145,36 @@ export class Add extends Component {
                                 required
                                 validations={{ minLength: 3 }}
                                 validationErrors={{ minLength: msg_more_than_3_letters }}
+                                errorLabel={<div className='error label' />}
+                            />
+                            <Form.Input fluid
+                                label='Quantity'
+                                placeholder='100'
+                                name='quantity'
+                                onChange={this.handleNumber}
+                                width={4}
+                                required
+                                validations={{
+                                    isInt: true
+                                }}
+                                validationErrors={{
+                                    isInt: numbers_only
+                                }}
+                                errorLabel={<div className='error label' />}
+                            />
+                            <Form.Input fluid
+                                label='Price'
+                                placeholder='20'
+                                name='price'
+                                onChange={this.handleNumber}
+                                width={4}
+                                required
+                                validations={{
+                                    isInt: true
+                                }}
+                                validationErrors={{
+                                    isInt: numbers_only
+                                }}
                                 errorLabel={<div className='error label' />}
                             />
                         </Form.Group>

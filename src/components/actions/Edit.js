@@ -7,8 +7,6 @@ import {
     numbers_only
 } from '../../assets/FormValidations/ErrorMessages';
 
-
-
 export class Edit extends Component {
 
     constructor(props) {
@@ -64,7 +62,7 @@ export class Edit extends Component {
                 </Header>
                 <Modal.Content>
                     <Form onValidSubmit={this.handleSubmit} id='editItem'>
-                        <Form.Group widths='equal'>
+                        <Form.Group>
                             <Form.Input fluid
                                 label='Name'
                                 placeholder='Name'
@@ -110,7 +108,7 @@ export class Edit extends Component {
                                 required
                                 validations={{ isInt: true }}
                                 validationErrors={{ isInt: numbers_only }}
-                            errorLabel={<div className='error label' />}
+                                errorLabel={<div className='error label' />}
                             />
                             <Form.Input fluid
                                 label='color'

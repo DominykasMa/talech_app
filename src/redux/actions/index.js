@@ -32,3 +32,18 @@ export const enableDisableProduct = id => {
   };
 }
 
+export const editQuantity = (productQuantity, id) => {
+  return {
+    type: 'EDIT_QUANTITY',
+    productQuantity,
+    id
+  };
+}
+
+export const editPrice = (productPrice, id) => {
+  return {
+    type: 'EDIT_PRICE',
+    productPrice,
+    id
+  };
+}
