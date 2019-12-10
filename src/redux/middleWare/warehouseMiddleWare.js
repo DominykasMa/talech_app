@@ -31,7 +31,6 @@ function warehouseMiddleware({ dispatch }) {
                 const maxid = Math.max(...action.data.items.map(item => item.id));
                 action.product.id = maxid + 1;
                 action.data.items.push(action.product)
-
                 setData(action.data);
             }
             if (action.type === 'ENABLE_DISABLE_PRODUCT') {
@@ -55,7 +54,6 @@ function warehouseMiddleware({ dispatch }) {
                 action.productPrice.id = maxid + 1;
                 action.productPrice.data = moment().format('DD-MM-YYYY')
                 action.data.items[index].productPrice.push(action.productPrice);
-                console.log(action.productPrice.data);
                 setData(action.data);
             }
             return next(action);
